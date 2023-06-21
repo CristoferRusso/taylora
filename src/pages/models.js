@@ -1,38 +1,79 @@
-import Appbar from "../components/Appbar";
-import Footer from "../components/Footer";
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import i3Bianca from '../images/i3-bianca.jpg'
-import i8Nera from '../images/i8-nera.jpg'
 
-const Models = () => {
-    const Item = styled(Paper)(({ theme }) => ({
-        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-        ...theme.typography.body2,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    }));
+import Grid from '@mui/material/Grid';
+import CarElement from "../components/CarElement";
+import '../style/carelement.css'
+import Checkbox from '@mui/material/Checkbox';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import * as React from 'react';
+
+
+const Models = (props) => {
+
+    const [selectedValue, setSelectedValue] = React.useState('a');
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
+    };
+
+
+    const controlProps = (item) => ({
+        checked: selectedValue === item,
+        onChange: handleChange,
+        value: item,
+        name: 'size-radio-button-demo',
+        inputProps: { 'aria-label': item },
+    });
+
+    let carButton = props.carButton
+    const setCarButton = props.setCarButton
+
+
+
     return (
         <>
-            <Appbar />
             <div>
-                <Grid container spacing={{ xs: 2 }} columns={{ xs: 2, sm: 8, md: 18 }}>
-                    <Grid item xs={6}>
-                        <div className='presentation'>
-                            <img src={i3Bianca} style={{maxWidth:'400px'}}></img>
-                        </div>
+                <Grid container className="App-header" spacing={{ xs: 12 }} columns={{ xs: 2, sm: 8, md: 18 }} style={{ alignContent: 'center' }}>
+                    <Grid item xs={7}>
+                        <CarElement
+                            image={props.image1}
+                            title={props.title1}
+                            price={props.price1}
+                            button=<Checkbox
+                                onClick={(() => { if (carButton == 0) { setCarButton(carButton = 1) } })}
+                                icon={<RadioButtonUncheckedIcon />}
+                                checkedIcon={<CheckCircleIcon />}
+                                sx={{
+                                    '&.Mui-checked': {
+                                        color: '#FFB500',
+
+                                    },
+                                    '& .MuiSvgIcon-root': {
+                                        fontSize: 48,
+                                    },
+                                }}  {...controlProps('c')} />
+                        />
                     </Grid>
-                    <Grid item xs={6}>
-                        <div className='presentation'>
-                        <img src={i8Nera} style={{maxWidth:'400px'}}></img>
-                        </div>                
-                   </Grid>
+                    <Grid item xs={7}>
+                        <CarElement
+                             image={props.image2}
+                             title={props.title2}
+                             price={props.price2}
+                            button=<Checkbox
+                                onClick={(() => { if (carButton == 0) { setCarButton(carButton = 2) }})}
+                                icon={<RadioButtonUncheckedIcon />}
+                                checkedIcon={<CheckCircleIcon />}
+                                sx={{
+                                    '&.Mui-checked': {
+                                        color: '#FFB500',
+                                    },
+                                    '& .MuiSvgIcon-root': {
+                                        fontSize: 48,
+                                    },
+                                }} {...controlProps('b')} />
+                        />
+                    </Grid>
                 </Grid>
             </div>
-            <Footer />
         </>
 
     )
