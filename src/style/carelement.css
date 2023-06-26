@@ -1,0 +1,23 @@
+.Title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.car-image {
+  max-width: 100%;
+}
+
+.price {
+  text-align: center;
+}
+
+.container-car-element {
+  border: 2px solid #ededed;
+  border-radius: 5px;
+}

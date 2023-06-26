@@ -1,0 +1,53 @@
+#grey-metallic {
+  background-color: #303539;
+  border-radius: 50%;
+  height: 60px;
+  width: 50px;
+  border: 2px solid gray;
+  margin-right: 5px;
+}
+
+#grey-metallic:hover {
+  border-color: orange;
+  background-color: #303539;
+}
+
+#white {
+  background-color: White;
+  border-radius: 50px;
+  height: 60px;
+  width: 50px;
+  border: 2px solid gray;
+}
+
+#white:hover {
+  border-color: orange;
+}
+
+#mineral-grey {
+  background-color: #303539;
+  border-radius: 50%;
+  height: 60px;
+  width: 50px;
+  border: 2px solid gray;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#mineral-grey:hover {
+  border-color: orange;
+  background-color: #303539;
+}
+
+#orange-metallic {
+  background-color: #cf5a16;
+  border-radius: 50%;
+  height: 60px;
+  width: 50px;
+  border: 2px solid gray;
+}
+
+#orange-metallic:hover {
+  border-color: orange;
+  background-color: #cf5a16;
+}

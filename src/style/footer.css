@@ -1,13 +1,40 @@
 footer {
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    min-height: 70px;
-    width: 100%;
-    box-shadow: 2px 2px 25px 2px rgb(224, 224, 224);
-  }
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  min-height: 70px;
+  width: 100%;
+  box-shadow: 2px 2px 25px 2px rgb(224, 224, 224);
+}
 
-  
+#btn-stepBack {
+  height: 50px;
+  width: 170px;
+  background-color: #ededed;
+  color: black;
+}
+
+#btn-step {
+  height: 50px;
+  width: 170px;
+  margin-right: 8%;
+  background-color: orange;
+}
+
+.left {
+  text-align: left;
+}
+
+#btn-stepBack2 {
+  margin-right: 10px;
+  color: black;
+  border-radius: 50%;
+  height: 50px;
+}
+
+footer {
+  margin-top: 100px;
+}
