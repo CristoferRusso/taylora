@@ -1,26 +1,23 @@
 .Title {
-    text-align: center;
-    font-family: bold;
-    margin-top: 30px;
-
+  text-align: center;
+  margin-top: 30px;
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
- 
- .car-image {
-    max-width: 100%;
- } 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
 
- .price{
-    text-align: center;
+.car-image {
+  max-width: 100%;
+}
 
- }
+.price {
+  text-align: center;
+}
 
- .container-car-element {
-    border: 2px solid #EDEDED;
-    border-radius: 5px;
- }
+.container-car-element {
+  border: 2px solid #ededed;
+  border-radius: 5px;
+}
